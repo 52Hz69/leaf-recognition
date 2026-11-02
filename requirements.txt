@@ -1,0 +1,19 @@
+# 后端 + 训练依赖
+# 安装：pip install -r requirements.txt
+# 国内加速：pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+flask>=3.0
+pillow>=10.0
+numpy>=1.24
+pyyaml>=6.0
+
+# 深度学习框架（CPU 版本即可运行；有显卡可装 CUDA 版本，见 https://pytorch.org/get-started/locally/）
+torch>=2.0
+torchvision>=0.15
+
+# YOLOv8 分类训练与推理
+ultralytics>=8.3.0
+
+# 数据与测试
+opencv-python>=4.8
+requests>=2.31

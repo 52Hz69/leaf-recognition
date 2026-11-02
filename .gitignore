@@ -1,0 +1,43 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ===== 训练输出与缓存 =====
+runs/
+*.cache
+*.pt
+# 保留仓库自带的推理权重
+!backend/model/best.pt
+
+# ===== 数据集图片（体积大，不入库） =====
+dataset/train/**/*.jpg
+dataset/train/**/*.jpeg
+dataset/train/**/*.png
+dataset/train/**/*.bmp
+dataset/train/**/*.webp
+dataset/val/**/*.jpg
+dataset/val/**/*.jpeg
+dataset/val/**/*.png
+dataset/val/**/*.bmp
+dataset/val/**/*.webp
+!samples/*.jpg
+
+# ===== IDE / 系统 =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ===== 小程序 =====
+miniprogram/node_modules/
+miniprogram/miniprogram_npm/
+miniprogram/project.private.config.json
+project.private.config.json
+
+# ===== 本地环境文件 =====
+.env
+*.local

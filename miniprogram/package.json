@@ -1,0 +1,19 @@
+{
+  "name": "bean-leaf-disease-miniprogram",
+  "version": "1.0.0",
+  "description": "豆类作物叶片病虫害识别系统 - 微信小程序端",
+  "scripts": {
+  },
+  "keywords": [
+    "miniprogram",
+    "plant-disease",
+    "yolov8"
+  ],
+  "author": "",
+  "license": "",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^2.8.3-1"
+  }
+}

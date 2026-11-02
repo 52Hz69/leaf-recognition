@@ -1,0 +1,40 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="card">
+    <view class="title">豆类作物叶片病虫害识别</view>
+
+    <button class="btn-choose" type="primary" bindtap="chooseImage" disabled="{{isProcessing}}">
+      选择图片
+    </button>
+
+    <view class="image-preview">
+      <image wx:if="{{imagePath}}" class="preview-img" src="{{imagePath}}" mode="widthFix"></image>
+      <view wx:else class="placeholder-img">
+        <view class="placeholder-icon">🌿</view>
+        <view class="placeholder-text">未选择图片</view>
+      </view>
+    </view>
+
+    <button class="btn-recognize" type="warn" bindtap="recognizeImage" disabled="{{!imagePath || isProcessing}}">
+      {{isProcessing ? '识别中...' : '开始识别'}}
+    </button>
+  </view>
+
+  <!-- 识别结果 -->
+  <view class="result-card" wx:if="{{predictions.length > 0}}">
+    <view class="result-title">识别结果</view>
+    <view class="result-list">
+      <block wx:for="{{predictions}}" wx:key="class_id">
+        <view class="result-item">
+          <text class="result-class">{{item.class_name}}</text>
+          <text class="result-conf">置信度 {{item.confText}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="result-card empty" wx:elif="{{hasRecognized}}">
+    <view class="result-title">未识别到有效结果</view>
+    <view class="result-tip">请确保图片清晰且包含完整的叶片</view>
+  </view>
+</view>
